@@ -1,0 +1,65 @@
+---
+title: "A silent movie for MMC"
+author: "Jaclyn Janis"
+output: html_document
+---
+
+Today, I'm going to walk you through this rmarkdown document to demonstrate its anatomy and functionality, all without saying a word. Sit back, relax, and just watch the overall process. We'll discuss subsequently.
+
+# Reading in the data
+```{r}
+#this is a built-in dataset. See details here:
+?swiss
+
+swiss <- swiss
+```
+
+This dataframe contains "standardized fertility measure and socio-economic indicators for each of 47 French-speaking provinces of Switzerland at about 1888."
+
+# Let's look at the data
+
+```{r message=FALSE, warning=FALSE}
+#First, I'll load my packages.
+library(tidyverse)
+library(skimr)
+
+# As you see, when I run that code, I receive some messages about those packages, and I don't really feel like seeing those, so I'll change the chunk options to control the output.
+
+#Next, I'll skim the dataframe
+
+skim(swiss)
+```
+
+# Let's visualize something
+
+```{r}
+swiss %>% 
+  #remember how those town names weren't really a column? let's fix that right quick.
+  rownames_to_column(var = "Town") %>% 
+  #now to the viz
+  ggplot(aes(x = Fertility, y = Infant.Mortality, color = Town)) +
+  geom_point() +
+  coord_flip() +
+  theme(legend.position = "none")
+```
+
+# Let's make something interactive
+
+You can hover over the points to see the town name and estimates of fertility and infant mortality.
+
+```{r message=FALSE, warning=FALSE}
+library(plotly)
+
+#I'm going to save the above visualization as an object
+swiss_viz <- swiss %>% 
+  rownames_to_column(var = "Town") %>% 
+  ggplot(aes(x = Fertility, y = Infant.Mortality, color = Town)) +
+  geom_point() +
+  coord_flip() +
+  theme(legend.position = "none")
+
+ggplotly(swiss_viz)
+```
+
+# Conclusion
+I really like what I've made, and I think it's worth rendering so I can share it with my collaborators.
