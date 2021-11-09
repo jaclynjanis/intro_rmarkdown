@@ -6,9 +6,10 @@ output:
     code_folding: hide
 ---
 
-Today, I'm going to walk you through this rmarkdown document to demonstrate its anatomy and functionality, all without saying a word. Sit back, relax, and just watch the overall process. We'll discuss subsequently.
+Today, I'm going to walk you through this R Markdown document to demonstrate its anatomy and functionality, without narrating. Sit back, relax, and take note of the overall process. We'll discuss subsequently.
 
 # Reading in the data
+
 ```{r}
 #this is a built-in dataset. See details here:
 ?swiss
@@ -64,4 +65,5 @@ ggplotly(swiss_viz)
 ```
 
 # Conclusion
-I really like what I've made, and I think it's worth rendering so I can share it with my collaborators.
+
+The mean standardized fertility measure among these towns in 1888 was `r round(mean(swiss$Fertility), 2)`. I really like what I've made, and I think it's worth rendering so I can share it with my collaborators.
