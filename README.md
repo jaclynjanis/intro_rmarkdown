@@ -1,6 +1,6 @@
 # intro_rmarkdown
 
-This material was designed for a 1-hour Customer Success session on Rmarkdown. The scope of this session includes:
+This material was designed for a 1-hour Customer Success session on R Markdown. The scope of this session includes:
 
 -   an overview of what can be achieved with Rmarkdown
 
