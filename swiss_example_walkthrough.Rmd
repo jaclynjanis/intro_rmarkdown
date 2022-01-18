@@ -1,5 +1,5 @@
 ---
-title: "A silent movie for MMC"
+title: "Silent movies for MMC"
 author: "Jaclyn Janis"
 output:
   html_document:
