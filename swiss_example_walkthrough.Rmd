@@ -1,6 +1,6 @@
 ---
 title: "Silent movies for MMC"
-author: "Jaclyn Janis"
+author: "Jaclyn Janis & Phil"
 output:
   html_document:
     code_folding: hide
