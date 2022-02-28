@@ -1,5 +1,5 @@
 ---
-title: "A silent movie for MMC"
+title: "R Markdown: A silent movie"
 author: "Jaclyn Janis"
 output:
   html_document:
@@ -11,6 +11,7 @@ Today, I'm going to walk you through this R Markdown document to demonstrate its
 # Reading in the data
 
 ```{r}
+library(rmarkdown)
 #this is a built-in dataset. See details here:
 ?swiss
 
