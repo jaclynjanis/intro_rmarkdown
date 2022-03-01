@@ -1,7 +1,6 @@
 ---
 title: "R Markdown: A silent movie"
 author: "Jaclyn Janis"
-title: "Silent movies for MMC"
 output:
   html_document:
     code_folding: hide
